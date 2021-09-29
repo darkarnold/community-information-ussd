@@ -24,7 +24,7 @@ if($text == '') {
   $phoneNumberDPC = "- 0703004005";
   $nameDPC = "Okello Vincent";
 
-  //terminal request begims with END keyword
+  //terminal request begins with END keyword
   $response = "END Contact for ".$nameDPC . $phoneNumberDPC;
 } else if ($text == '1*2') {
   
@@ -40,6 +40,38 @@ if($text == '') {
   $response = "END Contact for" .$nameDPC . $phoneNumberDPC;
 
 }
+
+else if($text == '2') {
+  // Business logic for second level
+  $response = "CON Select which announcement to get information on \n";
+  $response .= " 1. Lost Items \n";
+  $response .= "2. Missing persons \n";
+  $response .= "3. Death Announcements"
+} else if($text == '2*1') {
+  $missingItem = "three cows and two goats";
+  $phoneContact = " 0705675634";
+  $name = "Kato";
+
+  $response = "END .$missingItem. belonging to .$name. are missing. Please contact this number if found -.$phoneContact";
+
+}else if($text == '2*2') {
+  $missingPerson = "Jane Smith";
+  $phoneContact = "0788904567";
+  $contactPerson = " John Smith";
+
+  $response = "END .$missingPerson. has gone missing from the area if found contact .$contactPerson. on the following number - .$phoneContact";
+
+}else if ($text == '2*3') {
+  $deceasedPerson = "Oliver Twist";
+  $placeOfBurial = "London";
+  $dateOfDeath = "04 January 2020";
+  $timeOfBurial = "06 January 2020";
+  $contactPerson = "Tom Little";
+  $phoneContact = " 0756893456";
+
+  $response = "END The family of .$contactPerson. would like to announce the passing of .$deceasedPerson. who passed on .$dateOfDeath. and will be buried on .$timeofBurial. in .$placeOfBurial. For more details contact this number - .$phoneContact";
+}
+
 
 // Echo the response to the API
 header('Content-Type: text/plain');

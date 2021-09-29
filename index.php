@@ -10,9 +10,8 @@ if($text == '') {
   $response = "CON Welcome to the community information center Please select a service \n";
   $response .= "1. Area Security Info \n";
   $response .= "2. Announcements \n";
-  $response .= "3. Elder Welfare \n";
-  $response .= "4. Child Welfare \n";
-  $response .= "5. Waste Management ";
+  $response .= "3. Welfare \n";
+  $response .= "4. Waste Management ";
 
 } else if($text == '1') {
   // Business logic for first level

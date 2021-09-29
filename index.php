@@ -46,7 +46,8 @@ else if($text == '2') {
   $response = "CON Select which announcement to get information on \n";
   $response .= " 1. Lost Items \n";
   $response .= "2. Missing persons \n";
-  $response .= "3. Death Announcements"
+  $response .= "3. Death Announcements";
+  
 } else if($text == '2*1') {
   $missingItem = "three cows and two goats";
   $phoneContact = " 0705675634";

@@ -53,14 +53,14 @@ else if($text == '2') {
   $phoneContact = " 0705675634";
   $name = "Kato";
 
-  $response = "END . $missingItem . belonging to . $name . are missing. Please contact this number if found -. $phoneContact";
+  $response = "END ". $missingItem . "belonging to" . $name . "are missing. Please contact this number if found -" . $phoneContact;
 
 }else if($text == '2*2') {
   $missingPerson = "Jane Smith";
   $phoneContact = "0788904567";
   $contactPerson = " John Smith";
 
-  $response = "END . $missingPerson . has gone missing from the area if found contact . $contactPerson . on the following number - . $phoneContact";
+  $response = "END" . $missingPerson . "has gone missing from the area if found contact" . $contactPerson . "on the following number - ". $phoneContact;
 
 }else if ($text == '2*3') {
   $deceasedPerson = "Oliver Twist";
@@ -70,7 +70,7 @@ else if($text == '2') {
   $contactPerson = "Tom Little";
   $phoneContact = " 0756893456";
 
-  $response = "END The family of . $contactPerson . would like to announce the passing of . $deceasedPerson . who passed on . $dateOfDeath . and will be buried on . $timeofBurial . in . $placeOfBurial . For more details contact this number - . $phoneContact";
+  $response = "END The family of " . $contactPerson . "would like to announce the passing of" . $deceasedPerson . "who passed on" . $dateOfDeath . "and will be buried on" . $timeofBurial . "in" . $placeOfBurial . "For more details contact this number -" . $phoneContact;
 }
 
 

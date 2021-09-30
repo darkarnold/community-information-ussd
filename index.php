@@ -53,14 +53,14 @@ else if($text == '2') {
   $phoneContact = " 0705675634";
   $name = "Kato";
 
-  $response = "END ". $missingItem . "belonging to" . $name . "are missing. Please contact this number if found -" . $phoneContact;
+  $response = "END ". $missingItem . " belonging to " . $name . " are missing. Please contact this number if found - " . $phoneContact;
 
 }else if($text == '2*2') {
   $missingPerson = "Jane Smith";
   $phoneContact = "0788904567";
   $contactPerson = " John Smith";
 
-  $response = "END" . $missingPerson . "has gone missing from the area if found contact" . $contactPerson . "on the following number - ". $phoneContact;
+  $response = "END" . $missingPerson . " has gone missing from the area if found " . $contactPerson . " on the following number - ". $phoneContact;
 
 }else if ($text == '2*3') {
   $deceasedPerson = "Oliver Twist";
@@ -70,9 +70,46 @@ else if($text == '2') {
   $contactPerson = "Tom Little";
   $phoneContact = " 0756893456";
 
-  $response = "END The family of " . $contactPerson . "would like to announce the passing of" . $deceasedPerson . "who passed on" . $dateOfDeath . "and will be buried on" . $timeofBurial . "in" . $placeOfBurial . "For more details contact this number -" . $phoneContact;
+  $response = "END The family of " . $contactPerson . " would like to announce the passing of " . $deceasedPerson . " who passed on " . $dateOfDeath . " and will be buried on " . $timeofBurial . " in " . $placeOfBurial . " For more details contact this number - " . $phoneContact;
+
+} else if($text == '3') {
+  $response = "CON Select which welfare service you would like to get in touch with \n";
+  $response .= "1. Child Welfare \n";
+  $response .= "2. Elder welfare";
 }
 
+else if($text == '3*1') {
+  $contactPerson = "Mary Weathers";
+  $phoneContact = "075678934";
+
+  $response = "END For child care related services, contact " . $contactPerson . " on the following number - " . $phoneContact; 
+ 
+}else if($text == '3*2') {
+  $contactPerson = "David Wasswa";
+  $phoneContact = "0788456789";
+
+  $response = "END For services related to the elderly, contact " . $contactPerson . " on the following number - " . $phoneContact;
+}
+
+else if($text == '4') {
+  $response = "CON Select the waste management provider to get in touch with \n";
+  $response .= "1. Kasasiro Boys \n";
+  $response .= "2. Village Waste Collection";
+}
+
+else if ($text == '4*1') {
+  $monthlyrate = "UGX 15,000";
+  $phoneContact = "0708454554";
+
+  $response = "END The monthly rate for garbage collection is " . $monthlyrate . " Contact the following number for more  details " . $phoneContact;
+}
+
+else if($text == '4*2') {
+  $monthlyrate = "UGX 10,000";
+  $phoneContact = "0755653345";
+
+  $response = "END The monthly rate for garbage collection is " . $monthlyrate . " Contact the following number for more  details " . $phoneContact;
+}
 
 // Echo the response to the API
 header('Content-Type: text/plain');
